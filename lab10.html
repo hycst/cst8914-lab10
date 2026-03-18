@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible Menu</title>
+  <link href="CSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<main>
+  <h1>Managing Keyboard Focus</h1>
+
+  <p>
+    Instructions: Use <strong>up & down arrow keys</strong> to navigate between menu items,
+    <strong>enter</strong> to select, <strong>escape</strong> to close menu.
+  </p>
+
+  <h2>What to do:</h2>
+  <p>Apply roving tabindex technique to manage keyboard focus.</p>
+
+  <div class="menu-button-actions">
+    <p>
+      <label>
+        Pizza Choice:<br>
+        <input id="action_output" type="text" value="">
+      </label>
+    </p>
+
+    <!-- Menu Button -->
+    <button type="button"
+            id="menubutton1"
+            aria-haspopup="true"
+            aria-controls="menu1"
+            aria-expanded="false">
+      Pizza Menu ▼
+    </button>
+
+    <!-- Menu -->
+    <ul id="menu1" role="menu" aria-labelledby="menubutton1" hidden>
+      <li role="menuitem">Pizza 1</li>
+      <li role="menuitem">Pizza 2</li>
+      <li role="menuitem">Pizza 3</li>
+      <li role="menuitem">Pizza 4</li>
+    </ul>
+  </div>
+</main>
+
+<script src="lab10.js"></script>
+</body>
+</html>
